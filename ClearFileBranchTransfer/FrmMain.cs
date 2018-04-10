@@ -50,7 +50,6 @@ namespace ClearFileBranchTransfer
 
                 lvList.Items.Add(lvi);
 
-
                 // 颜色
                 if (clearFile.IsOK)
                     lvi.BackColor = SystemColors.Window;

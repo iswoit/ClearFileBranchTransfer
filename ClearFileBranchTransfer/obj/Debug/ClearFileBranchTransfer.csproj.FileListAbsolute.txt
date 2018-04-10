@@ -1,0 +1,8 @@
+D:\Codes\C#\ClearFileBranchTransfer\ClearFileBranchTransfer\bin\Debug\ClearFileBranchTransfer.exe
+D:\Codes\C#\ClearFileBranchTransfer\ClearFileBranchTransfer\bin\Debug\ClearFileBranchTransfer.pdb
+D:\Codes\C#\ClearFileBranchTransfer\ClearFileBranchTransfer\obj\Debug\ClearFileBranchTransfer.csprojResolveAssemblyReference.cache
+D:\Codes\C#\ClearFileBranchTransfer\ClearFileBranchTransfer\obj\Debug\ClearFileBranchTransfer.Properties.Resources.resources
+D:\Codes\C#\ClearFileBranchTransfer\ClearFileBranchTransfer\obj\Debug\ClearFileBranchTransfer.csproj.GenerateResource.Cache
+D:\Codes\C#\ClearFileBranchTransfer\ClearFileBranchTransfer\obj\Debug\ClearFileBranchTransfer.exe
+D:\Codes\C#\ClearFileBranchTransfer\ClearFileBranchTransfer\obj\Debug\ClearFileBranchTransfer.pdb
+D:\Codes\C#\ClearFileBranchTransfer\ClearFileBranchTransfer\obj\Debug\ClearFileBranchTransfer.FrmMain.resources

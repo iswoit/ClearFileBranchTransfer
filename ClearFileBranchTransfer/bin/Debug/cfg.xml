@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="GBK"?>
+<Config>
+	<!--清算文件列表(除非中登变接口，否则一般不改)-->
+	<ClearFileList>
+		<ClearFile><!--清算文件-->
+			<FileList><!--文件路径-->
+				<File>D:\gh23078.dbf</File>
+				<File>D:\gh23100.dbf</File>
+				<File>D:\gh23133.dbf</File>
+				<File>D:\gh26609.dbf</File>
+			</FileList>
+			<Market>SH</Market><!--市场-->
+			<ContractCol>sqbh</ContractCol><!--合同号列-->
+			<ContractStart>1</ContractStart><!--合同号第几个字符开始-->
+			<ContractLength>3</ContractLength><!--合同号长度-->
+			<AccountCol>gddm</AccountCol><!--股东号列-->
+		</ClearFile>
+		<ClearFile>
+			<FileList>
+				<File>D:\sjsmx1MMDD.dbf</File>
+			</FileList>
+			<Market>SZ</Market>
+			<ContractCol>mxddbh</ContractCol><!--合同号列-->
+			<ContractStart>1</ContractStart><!--合同号第几个字符开始-->
+			<ContractLength>2</ContractLength><!--合同号长度-->
+			<AccountCol>mxzqzh</AccountCol><!--股东号列-->
+		</ClearFile>
+	</ClearFileList>
+	
+	<!--新旧合同前缀号对应-->
+	<PrefixList>
+		<Prefix><!--上海市场-->
+			<Market>SH</Market>
+			<Old>035</Old>
+			<New>212</New>
+		</Prefix>
+		<Prefix><!--深圳市场-->
+			<Market>SZ</Market>
+			<Old>QK</Old>
+			<New>RV</New>
+		</Prefix>
+	</PrefixList>
+	
+	<!--需要修改的股东号列表-->
+	<AccountList>
+		<Account Market="SH">
+			<Acc>A501584950</Acc>
+			<Acc>E014639015</Acc>
+			<Acc>A334542095</Acc>
+			<Acc>A321203983</Acc>
+			<Acc>A629220649</Acc>
+			<Acc>A309767742</Acc>
+			<Acc>E005453923</Acc>
+			<Acc>E047505342</Acc>
+		</Account>
+		<Account  Market="SZ">
+			<Acc>0600546276</Acc>
+			<Acc>0140704893</Acc>
+			<Acc>0055820088</Acc>
+			<Acc>0119769848</Acc>
+			<Acc>0601470115</Acc>
+			<Acc>0055474180</Acc>
+			<Acc>0162099331</Acc>
+			<Acc>0604744874</Acc>
+		</Account>
+	</AccountList>
+</Config>
