@@ -18,19 +18,14 @@ namespace ClearFileBranchTransfer
 
         // 运行时变量
         private bool _isRunning = false;
-        private bool _isOK = false;
         private string _status = string.Empty;
 
+
+        #region 方法
 
         /// <summary>
         /// 构造函数
         /// </summary>
-        /// <param name="filePath"></param>
-        /// <param name="market"></param>
-        /// <param name="contractCol"></param>
-        /// <param name="contractStart"></param>
-        /// <param name="contractLength"></param>
-        /// <param name="accountCol"></param>
         public ClearFile(string filePath, string market, string contractCol, string contractStart, string contractLength, string accountCol, Prefix prefix, AccList accList)
         {
             _filePath = filePath;
@@ -55,12 +50,30 @@ namespace ClearFileBranchTransfer
 
 
             _isRunning = false;
-            _isOK = false;
             _status = "未开始";
+        }
+
+        public void ResetStatus()
+        {
+            _isRunning = false;
+            _status = "未开始";
+
+            // 重置文件状态
+            List<string> tmpList = new List<string>(_accList.Keys);
+            for (int i = 0; i < tmpList.Count; i++)
+            {
+                _accList[tmpList[i]] = false;
+            }
         }
 
 
 
+
+        #endregion
+
+
+
+        #region 属性
         public string FilePath
         {
             get { return _filePath; }
@@ -81,9 +94,37 @@ namespace ClearFileBranchTransfer
             get { return _prefix.NewPrefix; }
         }
 
+        public string ContractCol
+        {
+            get { return _contractCol; }
+        }
+
+        public int ContractStart
+        {
+            get { return _contractStart; }
+        }
+
+        public int ContractLength
+        {
+            get { return _contractLength; }
+        }
+
+        public string AccountCol
+        {
+            get { return _accountCol; }
+        }
+
+        public Dictionary<string, bool> AccList
+        {
+            get { return _accList; }
+            set { _accList = value; }
+        }
+
+
         public bool IsRunning
         {
             get { return _isRunning; }
+            set { _isRunning = value; }
         }
 
         public string Procedure
@@ -102,12 +143,23 @@ namespace ClearFileBranchTransfer
 
         public bool IsOK
         {
-            get { return _isOK; }
+            get
+            {
+                foreach (KeyValuePair<string, bool> kv in _accList)
+                {
+                    if (kv.Value == false)
+                        return false;
+                }
+
+                return true;
+            }
         }
 
         public string Status
         {
             get { return _status; }
+            set { _status = value; }
         }
+        #endregion
     }
 }

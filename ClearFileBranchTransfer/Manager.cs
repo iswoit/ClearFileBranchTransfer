@@ -240,5 +240,27 @@ namespace ClearFileBranchTransfer
             get { return _clearFileColl; }
         }
 
+
+        public bool IsRunning
+        {
+            get { return _isRunning; }
+            set { _isRunning = value; }
+        }
+
+
+        public bool IsAllOK
+        {
+            get
+            {
+                foreach (ClearFile clearFile in _clearFileColl)
+                {
+                    if (clearFile.IsOK == false)
+                        return false;
+                }
+
+                return true;
+            }
+        }
+
     }
 }
