@@ -51,6 +51,11 @@ namespace ClearFileBranchTransfer
 
             _isRunning = false;
             _status = "未开始";
+
+
+            // <ClearFile>清算文件的长度(<ContractLength>)一定要和<Prefix>一样长
+            if (_contractLength != prefix.OldPrefix.Length)
+                throw new Exception(string.Format(@"清算文件[{0}]合同号长度[{1}]与<Prefix>对应市场的长度[{2}]不一致, 请检查配置!", _filePath, _contractLength, prefix.OldPrefix.Length));
         }
 
         public void ResetStatus()

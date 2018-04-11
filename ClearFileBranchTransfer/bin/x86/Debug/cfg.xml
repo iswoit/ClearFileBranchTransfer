@@ -31,8 +31,8 @@
 	<PrefixList>
 		<Prefix><!--上海市场-->
 			<Market>SH</Market>
-			<Old>212</Old>
-			<New>035</New>
+			<Old>035</Old>
+			<New>212</New>
 		</Prefix>
 		<Prefix><!--深圳市场-->
 			<Market>SZ</Market>

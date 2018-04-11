@@ -174,7 +174,7 @@ namespace ClearFileBranchTransfer
                     // 3.遍历每个股东号进行修改
                     // 进行update操作
                     int updateCnt = 0;
-                    string connectString = @"Provider=VFPOLEDB.1;Data Source=C:\;Collating Sequence=MACHINE";   // 连接串
+                    string connectString = @"Provider=VFPOLEDB.1;Data Source=D:\;Collating Sequence=MACHINE";    // 连接串
                     try
                     {
                         using (OleDbConnection connection = new OleDbConnection(connectString))
